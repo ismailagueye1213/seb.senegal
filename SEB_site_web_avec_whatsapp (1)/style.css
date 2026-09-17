@@ -1,0 +1,48 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#0b8f45;--dark:#17202b;--gold:#f5b51b;--light:#f5f8f5}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--dark);line-height:1.6;background:#fff}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+.header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid #e7ece8}
+.nav{height:78px;display:flex;align-items:center;gap:30px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:25px;color:var(--green)}
+.brand img{width:55px;height:55px;object-fit:cover;border-radius:50%}
+nav{display:flex;gap:24px;margin-left:auto;font-weight:700}
+nav a:hover{color:var(--green)}
+.btn{display:inline-block;background:var(--green);color:white;padding:13px 22px;border-radius:8px;font-weight:800;border:2px solid var(--green)}
+.btn:hover{transform:translateY(-1px)}
+.btn-small{padding:9px 15px}
+.btn-outline{background:transparent;color:var(--green)}
+.btn-light{background:#fff;color:var(--green);border-color:#fff}
+.hero{padding:90px 0;background:linear-gradient(120deg,#f7faf7 0%,#eef7f0 55%,#fff 100%)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center}
+.eyebrow{color:var(--green);font-weight:900;letter-spacing:2px;font-size:14px;margin-bottom:12px}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.03;margin-bottom:22px}
+h1 span{color:var(--green)}
+.lead{font-size:20px;max-width:650px;color:#52605a;margin-bottom:30px}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-card{min-height:350px;border-radius:28px;background:linear-gradient(145deg,var(--dark),#263744);color:white;padding:45px;display:flex;flex-direction:column;justify-content:end;box-shadow:0 25px 60px rgba(18,38,28,.18);position:relative;overflow:hidden}
+.hero-card:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:var(--green);right:-80px;top:-80px}
+.sun{position:absolute;right:55px;top:45px;font-size:75px;color:var(--gold)}
+.hero-card h2{font-size:34px;line-height:1.1;position:relative}.hero-card p{margin-top:15px;color:#d8e5dc;position:relative}
+.section{padding:90px 0}.section h2,.about h2{font-size:42px;line-height:1.1;margin-bottom:35px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{padding:30px;border:1px solid #e0e9e2;border-radius:18px;background:white;box-shadow:0 10px 35px rgba(0,0,0,.05)}
+.icon{font-size:38px;margin-bottom:18px}.card h3{font-size:21px;margin-bottom:10px}.card p{color:#68746e}
+.about{padding:90px 0;background:var(--light)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about p{color:#5f6d65;font-size:18px}
+.values{display:grid;gap:15px}.values div{background:white;border-left:5px solid var(--green);padding:20px;border-radius:10px}.values strong{display:block;font-size:20px}.values span{color:#69756e}
+.cta{padding:70px 0;background:var(--green);color:white;text-align:center}.cta h2{font-size:42px}.cta p{margin:8px 0 25px;color:#e3f3e8}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.contact-box{background:#f6f8f6;border-radius:18px;padding:15px}.contact-box a,.contact-box div{display:block;padding:18px 20px;border-bottom:1px solid #dde5df}.contact-box a:last-child{border:0}.contact-box span{display:block;color:#6b766f;font-size:13px;text-transform:uppercase;letter-spacing:1px}.contact-box strong{font-size:19px}
+footer{background:var(--dark);color:#dce5df;padding:25px 0}.footer{display:flex;justify-content:space-between;gap:20px;font-size:14px}
+@media(max-width:850px){nav{display:none}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero{padding:65px 0}.cards{grid-template-columns:1fr 1fr}.hero-card{min-height:300px}.section,.about{padding:65px 0}}
+@media(max-width:560px){.cards{grid-template-columns:1fr}.nav{height:68px}.brand img{width:45px;height:45px}.brand{font-size:21px}.nav .btn{display:none}.hero-card{padding:30px}.hero-card h2{font-size:28px}.section h2,.about h2,.cta h2{font-size:34px}.footer{flex-direction:column}}
+
+/* Bouton WhatsApp flottant */
+.whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:9999;display:inline-flex;align-items:center;gap:9px;padding:13px 18px;border-radius:999px;background:#25D366;color:#fff;text-decoration:none;font-weight:700;font-size:15px;box-shadow:0 8px 24px rgba(0,0,0,.22);transition:transform .2s ease,box-shadow .2s ease}
+.whatsapp-float:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.28)}
+.whatsapp-icon{width:25px;height:25px;border:2px solid #fff;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:16px}
+@media(max-width:600px){.whatsapp-float{right:15px;bottom:15px;padding:12px 15px}}
