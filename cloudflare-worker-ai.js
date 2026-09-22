@@ -24,43 +24,23 @@ function corsHeaders() {
 
 export default {
   async fetch(request, env) {
-    if (request.method === 'OPTIONS') {
-      return new Response(null, { headers: corsHeaders() });
-    }
+    if (request.method === 'OPTIONS') return new Response(null, { headers: corsHeaders() });
 
     if (request.method !== 'POST') {
-      return new Response(JSON.stringify({ error: 'Méthode non autorisée' }), {
-        status: 405,
-        headers: corsHeaders()
-      });
+      return new Response(JSON.stringify({ error: 'Méthode non autorisée' }), { status: 405, headers: corsHeaders() });
     }
 
     try {
       const body = await request.json();
       const message = String(body.message || '').trim();
-
-      if (!message) {
-        return new Response(JSON.stringify({ error: 'Message vide' }), {
-          status: 400,
-          headers: corsHeaders()
-        });
-      }
-
-      if (!env.OPENAI_API_KEY) {
-        return new Response(JSON.stringify({ error: 'OPENAI_API_KEY non configurée' }), {
-          status: 500,
-          headers: corsHeaders()
-        });
-      }
+      if (!message) return new Response(JSON.stringify({ error: 'Message vide' }), { status: 400, headers: corsHeaders() });
+      if (!env.OPENAI_API_KEY) return new Response(JSON.stringify({ error: 'OPENAI_API_KEY non configurée' }), { status: 500, headers: corsHeaders() });
 
       const response = await fetch('https://api.openai.com/v1/responses', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${env.OPENAI_API_KEY}`
-        },
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${env.OPENAI_API_KEY}` },
         body: JSON.stringify({
-          model: 'gpt-5-mini',
+          model: 'gpt-5.6-luna',
           instructions: SYSTEM_PROMPT,
           input: message,
           max_output_tokens: 350
@@ -68,23 +48,12 @@ export default {
       });
 
       const data = await response.json();
-      if (!response.ok) {
-        return new Response(JSON.stringify({ error: 'Erreur du service IA' }), {
-          status: 502,
-          headers: corsHeaders()
-        });
-      }
+      if (!response.ok) return new Response(JSON.stringify({ error: 'Erreur du service IA' }), { status: 502, headers: corsHeaders() });
 
       const answer = data.output_text || 'Je n’ai pas pu générer une réponse. Contactez SEB sur WhatsApp.';
-      return new Response(JSON.stringify({ answer }), {
-        status: 200,
-        headers: corsHeaders()
-      });
+      return new Response(JSON.stringify({ answer }), { status: 200, headers: corsHeaders() });
     } catch (error) {
-      return new Response(JSON.stringify({ error: 'Erreur serveur' }), {
-        status: 500,
-        headers: corsHeaders()
-      });
+      return new Response(JSON.stringify({ error: 'Erreur serveur' }), { status: 500, headers: corsHeaders() });
     }
   }
 };
