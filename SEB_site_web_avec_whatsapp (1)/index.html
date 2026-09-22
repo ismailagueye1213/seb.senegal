@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sénégal Énergie & Bâtiment (SEB) - Construction, rénovation, électricité et solutions solaires à Kaolack.">
+  <meta name="description" content="Sénégal Énergie & Bâtiment (SEB) - Construction, rénovation, peinture, électricité et solutions solaires au Sénégal.">
   <title>SEB | Sénégal Énergie & Bâtiment</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -20,7 +20,7 @@
         <a href="#apropos">À propos</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="btn btn-small" href="tel:+221753318127">Nous contacter</a>
+      <a class="btn btn-small" href="https://wa.me/221753318127?text=Bonjour%20SEB%2C%20je%20souhaite%20un%20renseignement." target="_blank" rel="noopener noreferrer">WhatsApp</a>
     </div>
   </header>
 
@@ -32,14 +32,14 @@
           <h1>Construire aujourd’hui,<br><span>énergiser demain.</span></h1>
           <p class="lead">Des solutions fiables en bâtiment et en énergie pour accompagner vos projets à Kaolack et au Sénégal.</p>
           <div class="actions">
-            <a class="btn" href="#contact">Demander un devis</a>
+            <button class="btn" type="button" onclick="openQuote()">Demander un devis</button>
             <a class="btn btn-outline" href="#services">Découvrir nos services</a>
           </div>
         </div>
         <div class="hero-card">
           <div class="sun">☀</div>
           <h2>Votre partenaire<br>en énergie & bâtiment</h2>
-          <p>Construction • Rénovation • Électricité • Solaire</p>
+          <p>Construction • Rénovation • Peinture • Électricité • Solaire</p>
         </div>
       </div>
     </section>
@@ -49,26 +49,10 @@
         <p class="eyebrow">CE QUE NOUS FAISONS</p>
         <h2>Nos domaines d’activité</h2>
         <div class="cards">
-          <article class="card">
-            <div class="icon">🏠</div>
-            <h3>Travaux de bâtiment</h3>
-            <p>Construction, gros œuvre, second œuvre, rénovation et réhabilitation.</p>
-          </article>
-          <article class="card">
-            <div class="icon">☀️</div>
-            <h3>Solutions solaires</h3>
-            <p>Installation de panneaux solaires et accompagnement vers une énergie durable.</p>
-          </article>
-          <article class="card">
-            <div class="icon">⚡</div>
-            <h3>Électricité</h3>
-            <p>Installations électriques domestiques et professionnelles, maintenance et dépannage.</p>
-          </article>
-          <article class="card">
-            <div class="icon">🔧</div>
-            <h3>Maintenance</h3>
-            <p>Entretien, diagnostic et interventions pour maintenir vos installations en bon état.</p>
-          </article>
+          <article class="card"><div class="icon">🏠</div><h3>Construction de bâtiment</h3><p>Construction, gros œuvre, second œuvre et accompagnement de vos projets.</p></article>
+          <article class="card"><div class="icon">🔧</div><h3>Rénovation</h3><p>Rénovation, réhabilitation et amélioration de bâtiments existants.</p></article>
+          <article class="card"><div class="icon">🎨</div><h3>Peinture</h3><p>Travaux de peinture intérieure et extérieure avec finitions adaptées.</p></article>
+          <article class="card"><div class="icon">⚡</div><h3>Électricité & énergie</h3><p>Installations électriques, maintenance et solutions énergétiques adaptées.</p></article>
         </div>
       </div>
     </section>
@@ -78,7 +62,7 @@
         <div>
           <p class="eyebrow">À PROPOS DE SEB</p>
           <h2>Une expertise au service de vos projets</h2>
-          <p>Sénégal Énergie & Bâtiment met son savoir-faire au service des particuliers, professionnels et organisations qui souhaitent construire, rénover ou améliorer leurs solutions énergétiques.</p>
+          <p>Sénégal Énergie & Bâtiment met son savoir-faire au service des particuliers, professionnels et organisations qui souhaitent construire, rénover, peindre ou améliorer leurs solutions énergétiques.</p>
         </div>
         <div class="values">
           <div><strong>Qualité</strong><span>Des réalisations pensées pour durer.</span></div>
@@ -91,8 +75,8 @@
     <section class="cta">
       <div class="container">
         <h2>Vous avez un projet ?</h2>
-        <p>Parlons de votre besoin et préparons ensemble une solution adaptée.</p>
-        <a class="btn btn-light" href="mailto:gueyeisma1213@gmail.com">Écrire à SEB</a>
+        <p>Décrivez votre besoin et recevez une première orientation de SEB.</p>
+        <button class="btn btn-light" type="button" onclick="openQuote()">Demander un devis</button>
       </div>
     </section>
 
@@ -104,6 +88,7 @@
           <p>Nous sommes basés à <strong>Kaolack, Sénégal</strong>.</p>
         </div>
         <div class="contact-box">
+          <a href="https://wa.me/221753318127?text=Bonjour%20SEB%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20services." target="_blank" rel="noopener noreferrer"><span>WhatsApp</span><strong>+221 75 331 81 27</strong></a>
           <a href="tel:+221753318127"><span>Téléphone</span><strong>+221 75 331 81 27</strong></a>
           <a href="mailto:gueyeisma1213@gmail.com"><span>Email</span><strong>gueyeisma1213@gmail.com</strong></a>
           <div><span>Localisation</span><strong>Kaolack, Sénégal</strong></div>
@@ -119,12 +104,63 @@
     </div>
   </footer>
 
-<!-- Bouton WhatsApp -->
-<a href="https://wa.me/221753318127?text=Bonjour%20SEB%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20services."
-   class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contacter SEB sur WhatsApp">
-  <span class="whatsapp-icon">☏</span>
-  <span>WhatsApp</span>
-</a>
+  <!-- Bouton WhatsApp -->
+  <a href="https://wa.me/221753318127?text=Bonjour%20SEB%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contacter SEB sur WhatsApp">
+    <span class="whatsapp-icon">☏</span><span>WhatsApp</span>
+  </a>
 
+  <!-- Chatbot SEB -->
+  <button class="chat-launcher" id="chatLauncher" type="button" aria-label="Ouvrir l'assistant SEB">💬</button>
+  <section class="chatbot" id="chatbot" aria-label="Assistant SEB">
+    <div class="chat-header"><div><strong>Assistant SEB</strong><small>En ligne • réponse immédiate</small></div><button type="button" onclick="toggleChat()" aria-label="Fermer">×</button></div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="bot-msg">Bonjour 👋 Je suis l’assistant SEB. Je peux vous renseigner sur nos services ou vous aider à préparer une demande de devis.</div>
+      <div class="quick-actions">
+        <button type="button" onclick="quickReply('construction')">Construction</button>
+        <button type="button" onclick="quickReply('renovation')">Rénovation</button>
+        <button type="button" onclick="quickReply('peinture')">Peinture</button>
+        <button type="button" onclick="openQuote()">Demander un devis</button>
+      </div>
+    </div>
+    <form class="chat-input" id="chatForm">
+      <input id="chatInput" type="text" placeholder="Écrivez votre question..." autocomplete="off">
+      <button type="submit">➤</button>
+    </form>
+  </section>
+
+  <!-- Formulaire de devis -->
+  <div class="modal" id="quoteModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" type="button" onclick="closeQuote()">×</button>
+      <p class="eyebrow">DEVIS SEB</p>
+      <h2>Parlez-nous de votre projet</h2>
+      <p class="modal-intro">Après validation, votre demande sera préparée et envoyée sur WhatsApp.</p>
+      <form id="quoteForm">
+        <label>Nom complet<input name="nom" required placeholder="Votre nom"></label>
+        <label>Téléphone<input name="telephone" required placeholder="Votre numéro"></label>
+        <label>Service<select name="service" required><option value="">Choisir un service</option><option>Construction de bâtiment</option><option>Rénovation</option><option>Peinture</option><option>Électricité</option><option>Solution solaire</option><option>Autre</option></select></label>
+        <label>Lieu du projet<input name="lieu" required placeholder="Ville / quartier"></label>
+        <label>Description du projet<textarea name="description" rows="4" required placeholder="Décrivez brièvement votre projet..."></textarea></label>
+        <button class="btn quote-submit" type="submit">Envoyer la demande sur WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+<script>
+const WA='221753318127';
+const chatbot=document.getElementById('chatbot');
+const messages=document.getElementById('chatMessages');
+const chatInput=document.getElementById('chatInput');
+function toggleChat(){chatbot.classList.toggle('open');}
+document.getElementById('chatLauncher').addEventListener('click',toggleChat);
+function addMessage(text,who='bot'){const d=document.createElement('div');d.className=who==='user'?'user-msg':'bot-msg';d.textContent=text;messages.appendChild(d);messages.scrollTop=messages.scrollHeight;}
+function botAnswer(text){const t=text.toLowerCase();if(t.includes('construction')||t.includes('bâtiment')||t.includes('maison'))return 'SEB accompagne vos projets de construction de bâtiment, du gros œuvre au second œuvre. Cliquez sur « Demander un devis » pour décrire votre projet.';if(t.includes('rénov')||t.includes('renov'))return 'Nous réalisons des travaux de rénovation et de réhabilitation de bâtiments existants. Vous pouvez demander un devis directement depuis le formulaire.';if(t.includes('peint'))return 'SEB propose des travaux de peinture intérieure et extérieure avec des finitions adaptées au projet.';if(t.includes('électricité')||t.includes('electricite')||t.includes('solaire')||t.includes('énergie'))return 'Nous proposons des prestations liées à l’électricité et aux solutions énergétiques. Pour une estimation précise, envoyez votre demande de devis.';if(t.includes('prix')||t.includes('tarif')||t.includes('devis'))return 'Le prix dépend du type de travaux, des dimensions, des matériaux et du lieu. Utilisez notre formulaire de devis pour nous donner les détails du projet.';if(t.includes('whatsapp')||t.includes('contact'))return 'Vous pouvez contacter SEB sur WhatsApp au +221 75 331 81 27.';return 'Je peux vous renseigner sur la construction, la rénovation, la peinture, l’électricité, le solaire et les demandes de devis. Que souhaitez-vous réaliser ?';}
+function quickReply(type){const labels={construction:'Je veux construire un bâtiment',renovation:'Je veux rénover',peinture:'Je cherche un peintre'};const text=labels[type]||type;addMessage(text,'user');setTimeout(()=>addMessage(botAnswer(text)),250);}
+document.getElementById('chatForm').addEventListener('submit',e=>{e.preventDefault();const text=chatInput.value.trim();if(!text)return;addMessage(text,'user');chatInput.value='';setTimeout(()=>addMessage(botAnswer(text)),250);});
+function openQuote(){document.getElementById('quoteModal').classList.add('show');document.getElementById('quoteModal').setAttribute('aria-hidden','false');}
+function closeQuote(){document.getElementById('quoteModal').classList.remove('show');document.getElementById('quoteModal').setAttribute('aria-hidden','true');}
+document.getElementById('quoteModal').addEventListener('click',e=>{if(e.target.id==='quoteModal')closeQuote();});
+document.getElementById('quoteForm').addEventListener('submit',e=>{e.preventDefault();const data=new FormData(e.target);const text=`Bonjour SEB, je souhaite demander un devis.%0A%0ANom : ${encodeURIComponent(data.get('nom'))}%0ATéléphone : ${encodeURIComponent(data.get('telephone'))}%0AService : ${encodeURIComponent(data.get('service'))}%0ALieu : ${encodeURIComponent(data.get('lieu'))}%0ADescription : ${encodeURIComponent(data.get('description'))}`;window.open(`https://wa.me/${WA}?text=${text}`,'_blank');});
+</script>
 </body>
 </html>
